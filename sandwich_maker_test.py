@@ -7,15 +7,20 @@ class SandwichMakerTestCase(unittest.TestCase):
         sandwich = Sandwich()
         self.assertEqual(sandwich.size(), 0)
 
-    def test_is_not_vegetarian(self):
+    def test_is_not_vegan_with_dairy(self):
+        sandwich = Sandwich()
+        sandwich.add(Cheese())
+        self.assertFalse(sandwich.is_vegan())
+
+    def test_is_not_vegan_with_meat(self):
         sandwich = Sandwich()
         sandwich.add(Ham())
-        self.assertFalse(sandwich.is_vegetarian())
+        self.assertFalse(sandwich.is_vegan())
 
-    def test_is_vegetarian(self):
+    def test_is_vegan(self):
         sandwich = Sandwich()
         sandwich.add(Lettuce())
-        self.assertTrue(sandwich.is_vegetarian())
+        self.assertTrue(sandwich.is_vegan())
 
     def test_add_aliment_to_sandwich(self):
         sandwich = Sandwich()

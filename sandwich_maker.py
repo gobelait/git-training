@@ -38,9 +38,9 @@ class Sandwich:
     def __init__(self):
         self.__stack = []
 
-    def is_vegetarian(self):
+    def is_vegan(self):
         for aliment in self.__stack:
-            if aliment.nature == Nature.MEAT:
+            if aliment.nature == Nature.MEAT or aliment.nature == Nature.DAIRY:
                 return False
         return True
 
