@@ -59,6 +59,9 @@ class Sandwich:
             and self.__stack[self.size() - 1].nature == Nature.BREAD
         )
 
+    def reset(self):
+        self.__stack = []
+
     def __str__(self):
         composition = ""
 
