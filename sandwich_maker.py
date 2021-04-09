@@ -38,6 +38,12 @@ class Sandwich:
     def __init__(self):
         self.__stack = []
 
+    def is_vegetarian(self):
+        for aliment in self.__stack:
+            if aliment.nature == Nature.MEAT:
+                return False
+        return True
+
     def add(self, aliment):
         self.__stack.append(aliment)
 
@@ -65,6 +71,6 @@ class Sandwich:
 if __name__ == "__main__":
 
     mySandwich = Sandwich()
-    print (mySandwich.size())
+    print(mySandwich.size())
     mySandwich.add(1)
-    print (mySandwich.size())
+    print(mySandwich.size())
