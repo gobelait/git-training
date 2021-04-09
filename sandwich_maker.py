@@ -44,6 +44,9 @@ class Sandwich:
     def size(self):
         return len(self.__stack)
 
+    def remove_last(self):
+        self.__stack.pop()
+
     def is_well_composed(self):
         return (
             self.__stack[0].nature == Nature.BREAD

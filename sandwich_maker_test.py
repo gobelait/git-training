@@ -25,5 +25,12 @@ class SandwichMakerTestCase(unittest.TestCase):
         sandwich.add(Lettuce())
         self.assertFalse(sandwich.is_well_composed())
 
+    def test_remove_last_aliment(self):
+        sandwich = Sandwich()
+        sandwich.add(Lettuce())
+        sandwich.add(Lettuce())
+        sandwich.remove_last()
+        self.assertEqual(sandwich.size(), 1)
+
 if __name__ == "__main__":
     unittest.main()
