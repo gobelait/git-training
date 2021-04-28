@@ -78,6 +78,19 @@ class Sandwich:
     def reset(self):
         self.__stack = []
 
+    def is_complete(self):
+        has_vegetable = False
+        has_sauce = False
+
+        for aliment in self.__stack:
+            if aliment.nature == Nature.VEGETABLE:
+                has_vegetable = True
+
+            if aliment.nature == Nature.SAUCE:
+                has_sauce = True
+
+        return has_vegetable and has_sauce and self.is_well_composed()
+
     def __str__(self):
         composition = ""
 
