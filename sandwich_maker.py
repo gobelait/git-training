@@ -45,6 +45,11 @@ class Ham(Aliment):
         super().__init__(Nature.MEAT, "Ham")
 
 
+class Bacon(Aliment):
+    def __init__(self):
+        super().__init__(Nature.MEAT, "Bacon")
+
+
 class Lettuce(Aliment):
     def __init__(self):
         super().__init__(Nature.VEGETABLE, "Lettuce")
