@@ -20,6 +20,11 @@ class Mayonnaise(Aliment):
         super().__init__(Nature.SAUCE, 'Mayonnaise')
 
 
+class Ketchup(Aliment):
+    def __init__(self):
+        super().__init__(Nature.SAUCE, "Ketchup")
+
+
 class Butter(Aliment):
     def __init__(self):
         super().__init__(Nature.DAIRY, 'Butter')
