@@ -27,7 +27,7 @@ class Butter(Aliment):
 
 class Cheese(Aliment):
     def __init__(self):
-        super().__init__(Nature.DAIRY, 'Cheese')
+        super().__init__(Nature.DAIRY, "Cheese")
 
 
 class SliceOfBread(Aliment):
@@ -80,11 +80,3 @@ class Sandwich:
             composition += "\n" + aliment.name + "\n----------"
 
         return composition
-
-
-if __name__ == "__main__":
-
-    mySandwich = Sandwich()
-    print(mySandwich.size())
-    mySandwich.add(1)
-    print(mySandwich.size())
