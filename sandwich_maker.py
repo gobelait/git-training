@@ -50,6 +50,11 @@ class Lettuce(Aliment):
         super().__init__(Nature.VEGETABLE, "Lettuce")
 
 
+class Tomato(Aliment):
+    def __init__(self):
+        super().__init__(Nature.VEGETABLE, "Tomato")
+
+
 class Sandwich:
     def __init__(self):
         self.__stack = []
