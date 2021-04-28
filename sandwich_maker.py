@@ -71,9 +71,3 @@ class Sandwich:
         return composition
 
 
-if __name__ == "__main__":
-
-    mySandwich = Sandwich()
-    print(mySandwich.size())
-    mySandwich.add(1)
-    print(mySandwich.size())
