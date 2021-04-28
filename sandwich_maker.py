@@ -25,6 +25,11 @@ class Ketchup(Aliment):
         super().__init__(Nature.SAUCE, "Ketchup")
 
 
+class Samurai(Aliment):
+    def __init__(self):
+        super().__init__(Nature.SAUCE, "Samurai")
+
+
 class Butter(Aliment):
     def __init__(self):
         super().__init__(Nature.DAIRY, 'Butter')
@@ -53,6 +58,11 @@ class Bacon(Aliment):
 class Lettuce(Aliment):
     def __init__(self):
         super().__init__(Nature.VEGETABLE, "Lettuce")
+
+
+class Tomato(Aliment):
+    def __init__(self):
+        super().__init__(Nature.VEGETABLE, "Tomato")
 
 
 class Sandwich:
