@@ -1,5 +1,5 @@
 import unittest
-from sandwich_maker import Sandwich, Lettuce, SliceOfBread, Ham, Cheese, Mayonnaise
+from sandwich_maker import Sandwich, Lettuce, SliceOfBread, Ham, Cheese, Mayonnaise, create_club_sandwich
 
 
 class SandwichMakerTestCase(unittest.TestCase):
@@ -82,6 +82,10 @@ class SandwichMakerTestCase(unittest.TestCase):
         sandwich.add(Lettuce())
         sandwich.add(SliceOfBread())
         self.assertFalse(sandwich.is_complete())
+
+    def test_create_club_sandwich_is_complete(self):
+        club = create_club_sandwich()
+        self.assertTrue(club.is_complete())
 
 
 if __name__ == "__main__":

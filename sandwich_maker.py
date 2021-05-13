@@ -113,3 +113,16 @@ class Sandwich:
             composition += "\n" + aliment.name + "\n----------"
 
         return composition
+
+
+def create_club_sandwich():
+    club = Sandwich()
+
+    club.add(SliceOfBread())
+    club.add(Cheese())
+    club.add(Bacon())
+    club.add(Tomato())
+    club.add(Mayonnaise())
+    club.add(SliceOfBread())
+
+    return club
