@@ -75,6 +75,16 @@ class Sandwich:
                 return False
         return True
 
+    def get_composition(self):
+        compo = {}
+
+        for aliment in self.__stack:
+            if aliment.name not in compo:
+                compo[aliment.name] = 0
+            compo[aliment.name] += 1
+
+        return compo
+
     def add(self, aliment):
         self.__stack.append(aliment)
 

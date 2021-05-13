@@ -47,6 +47,15 @@ class SandwichMakerTestCase(unittest.TestCase):
         sandwich.reset()
         self.assertEqual(sandwich.size(), 0)
 
+    def test_get_composition(self):
+        expected = {"Slice of bread": 2, "Cheese": 1, "Ham": 1}
+        sandwich = Sandwich()
+        sandwich.add(SliceOfBread())
+        sandwich.add(Cheese())
+        sandwich.add(Ham())
+        sandwich.add(SliceOfBread())
+        self.assertEqual(expected, sandwich.get_composition())
+
     def test_remove_last_aliment(self):
         sandwich = Sandwich()
         sandwich.add(Lettuce())
