@@ -10,59 +10,60 @@ class Nature(Enum):
 
 
 class Aliment:
-    def __init__(self, nature, name):
+    def __init__(self, nature, name, symbol):
         self.nature = nature
         self.name = name
+        self.symbol = symbol
 
 
 class Mayonnaise(Aliment):
     def __init__(self):
-        super().__init__(Nature.SAUCE, 'Mayonnaise')
+        super().__init__(Nature.SAUCE, "Mayonnaise", "~~~M~~~")
 
 
 class Ketchup(Aliment):
     def __init__(self):
-        super().__init__(Nature.SAUCE, "Ketchup")
+        super().__init__(Nature.SAUCE, "Ketchup", "~~~K~~~")
 
 
 class Samurai(Aliment):
     def __init__(self):
-        super().__init__(Nature.SAUCE, "Samurai")
+        super().__init__(Nature.SAUCE, "Samurai", "~~~S~~~")
 
 
 class Butter(Aliment):
     def __init__(self):
-        super().__init__(Nature.DAIRY, 'Butter')
+        super().__init__(Nature.DAIRY, "Butter", "###B###")
 
 
 class Cheese(Aliment):
     def __init__(self):
-        super().__init__(Nature.DAIRY, "Cheese")
+        super().__init__(Nature.DAIRY, "Cheese", "###C###")
 
 
 class SliceOfBread(Aliment):
     def __init__(self):
-        super().__init__(Nature.BREAD, "Slice of bread")
+        super().__init__(Nature.BREAD, "Slice of bread", "(_____)")
 
 
 class Ham(Aliment):
     def __init__(self):
-        super().__init__(Nature.MEAT, "Ham")
+        super().__init__(Nature.MEAT, "Ham", "---H---")
 
 
 class Bacon(Aliment):
     def __init__(self):
-        super().__init__(Nature.MEAT, "Bacon")
+        super().__init__(Nature.MEAT, "Bacon", "---B---")
 
 
 class Lettuce(Aliment):
     def __init__(self):
-        super().__init__(Nature.VEGETABLE, "Lettuce")
+        super().__init__(Nature.VEGETABLE, "Lettuce", "000L000")
 
 
 class Tomato(Aliment):
     def __init__(self):
-        super().__init__(Nature.VEGETABLE, "Tomato")
+        super().__init__(Nature.VEGETABLE, "Tomato", "000T000")
 
 
 class Sandwich:
@@ -115,6 +116,14 @@ class Sandwich:
                 has_sauce = True
 
         return has_vegetable and has_sauce and self.is_well_composed()
+
+    def show(self):
+        composition = ""
+
+        for aliment in self.__stack:
+            composition += aliment.symbol + "\n"
+
+        return composition
 
     def __str__(self):
         composition = ""
