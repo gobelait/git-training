@@ -38,6 +38,15 @@ class SandwichMakerTestCase(unittest.TestCase):
         sandwich.add(SliceOfBread())
         self.assertFalse(sandwich.is_well_composed())
 
+    def test_get_composition(self):
+        sandwich = SandwichMaker()
+        sandwich.add(Lettuce())
+        sandwich.add(SliceOfBread())
+        composition = sandwich.get_composition()
+        self.assertEqual(composition[0].name, Lettuce().name)
+        self.assertEqual(composition[1].name, SliceOfBread().name)
+        self.assertEqual(sandwich.size(), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

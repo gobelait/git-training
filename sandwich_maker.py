@@ -58,6 +58,10 @@ class SandwichMaker:
         )
 
 
+    def get_composition(self):
+        return self.__sandwich
+
+
     def __str__(self):
         composition = ""
 
