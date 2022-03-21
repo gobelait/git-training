@@ -16,6 +16,7 @@ class SandwichMakerTestCase(unittest.TestCase):
     def test_is_vegan(self):
         sandwich = SandwichMaker()
         sandwich.add(Lettuce())
+        sandwich.add((SliceOfBread()))
         self.assertTrue(sandwich.is_vegan())
 
     def test_create_empty_sandwich(self):
