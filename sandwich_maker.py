@@ -44,6 +44,12 @@ class SandwichMaker:
     def size(self):
         return len(self.__sandwich)
 
+    def is_vegetarian(self):
+        for aliment in self.__sandwich:
+            if aliment.nature == Nature.MEAT:
+                return False
+        return True
+
     def is_well_composed(self):
         is_top_bread = self.__sandwich[0].nature == Nature.BREAD
         is_bottom_bread = self.__sandwich[-1].nature == Nature.BREAD
@@ -57,10 +63,8 @@ class SandwichMaker:
              is_top_bread and is_bottom_bread and has_filling
         )
 
-
     def get_composition(self):
         return self.__sandwich
-
 
     def __str__(self):
         composition = ""

@@ -3,6 +3,16 @@ from sandwich_maker import SandwichMaker, Lettuce, SliceOfBread, Ham, Cheese
 
 
 class SandwichMakerTestCase(unittest.TestCase):
+    def test_is_vegetarian(self):
+        sandwich = SandwichMaker()
+        sandwich.add(Lettuce())
+        self.assertTrue(sandwich.is_vegetarian())
+    
+    def test_is_not_vegetarian(self):
+        sandwich = SandwichMaker()
+        sandwich.add(Ham())
+        self.assertFalse(sandwich.is_vegetarian())
+
     def test_create_empty_sandwich(self):
         sandwich = SandwichMaker()
         self.assertEqual(sandwich.size(), 0)
