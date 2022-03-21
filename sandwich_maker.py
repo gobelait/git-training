@@ -57,6 +57,9 @@ class SandwichMaker:
              is_top_bread and is_bottom_bread and has_filling
         )
 
+    def reset(self):
+        self.__sandwich = []
+
 
     def get_composition(self):
         return self.__sandwich
