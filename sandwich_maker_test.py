@@ -57,6 +57,12 @@ class SandwichMakerTestCase(unittest.TestCase):
         self.assertEqual(composition[1].name, SliceOfBread().name)
         self.assertEqual(sandwich.size(), 2)
 
+    def test_reset(self):
+        sandwich = SandwichMaker()
+        sandwich.add(Lettuce())		
+        sandwich.reset()
+        self.assertEqual(sandwich.size(), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
