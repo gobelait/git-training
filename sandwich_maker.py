@@ -44,9 +44,9 @@ class SandwichMaker:
     def size(self):
         return len(self.__sandwich)
 
-    def is_vegetarian(self):
+    def is_vegan(self):
         for aliment in self.__sandwich:
-            if aliment.nature == Nature.MEAT:
+            if aliment.nature == Nature.MEAT or aliment.nature == Nature.DAIRY:
                 return False
         return True
 
