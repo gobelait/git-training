@@ -86,6 +86,15 @@ class SandwichMaker:
     def get_composition(self):
         return self.__sandwich
 
+    def get_aliment_counter(self):
+        counter = {}
+        for aliment in self.__sandwich:
+            if aliment.name not in counter:
+                counter[aliment.name] = 0
+            counter[aliment.name] += 1
+        return counter
+
+
     def __str__(self):
         composition = ""
 
