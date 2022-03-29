@@ -14,6 +14,11 @@ class Aliment:
         self.name = name
 
 
+class Butter(Aliment):
+    def __init__(self):
+        super().__init__(Nature.DAIRY, 'Butter')
+
+
 class Cheese(Aliment):
     def __init__(self):
         super().__init__(Nature.DAIRY, 'Cheese')
