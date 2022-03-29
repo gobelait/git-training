@@ -34,6 +34,11 @@ class Lettuce(Aliment):
         super().__init__(Nature.VEGETABLE, "Lettuce")
 
 
+class Pickle(Aliment):
+    def __init__(self):
+        super().__init__(Nature.VEGETABLE, "Pickle")
+
+
 class SandwichMaker:
     def __init__(self):
         self.__sandwich = []
