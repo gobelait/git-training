@@ -19,6 +19,11 @@ class Mayonnaise(Aliment):
   def __init__(self):
     super().__init__(Nature.SAUCE, 'Mayonnaise')
 
+class Mayonnaise(Aliment):
+    def __init__(self):
+        super()._init__(self, Nature.sauce, 'Mayonnaise')
+
+
 class Butter(Aliment):
     def __init__(self):
         super().__init__(Nature.DAIRY, 'Butter')
@@ -42,6 +47,11 @@ class Ham(Aliment):
 class Lettuce(Aliment):
     def __init__(self):
         super().__init__(Nature.VEGETABLE, "Lettuce")
+
+
+class Pickle(Aliment):
+    def __init__(self):
+        super().__init__(Nature.VEGETABLE, "Pickle")
 
 
 class SandwichMaker:
