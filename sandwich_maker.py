@@ -93,3 +93,11 @@ class SandwichMaker:
             composition += "\n" + aliment.name + "\n----------"
 
         return composition
+
+    def get_aliment_counter(self):
+       composition = {}
+       for aliment in self.__sandwich:
+           if aliment.name not in composition:
+               composition[aliment.name] = 0
+           composition[aliment.name] += 1
+       return composition

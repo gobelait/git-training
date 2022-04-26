@@ -69,6 +69,15 @@ class SandwichMakerTestCase(unittest.TestCase):
         sandwich.reset()
         self.assertEqual(sandwich.size(), 0)
 
+    def test_get_aliment_counter(self):
+        expected = {"Slice of bread": 2, "Cheese": 1, "Ham": 1}
+        sandwich = SandwichMaker()
+        sandwich.add(SliceOfBread())
+        sandwich.add(Cheese())
+        sandwich.add(Ham())
+        sandwich.add(SliceOfBread())
+        self.assertEqual(expected, sandwich.get_aliment_counter())
+
 
 if __name__ == "__main__":
     unittest.main()
