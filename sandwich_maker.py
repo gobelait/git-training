@@ -6,6 +6,8 @@ class Nature(Enum):
     MEAT = "meat"
     DAIRY = "dairy"
     VEGETABLE = "vegetable"
+    
+    SAUCE = "sauce"
 
 
 class Aliment:
@@ -13,6 +15,9 @@ class Aliment:
         self.nature = nature
         self.name = name
 
+class Mayonnaise(Aliment):
+  def __init__(self):
+    super().__init__(Nature.SAUCE, 'Mayonnaise')
 
 class Butter(Aliment):
     def __init__(self):
