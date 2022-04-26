@@ -101,3 +101,16 @@ class SandwichMaker:
                composition[aliment.name] = 0
            composition[aliment.name] += 1
        return composition
+    
+    def is_complete(self):
+        has_vegetable = False
+        has_sauce = False
+       
+        for aliment in self.__sandwich:
+            if aliment.nature == Nature.VEGETABLE:
+                has_vegetable = True
+
+            if aliment.nature == Nature.SAUCE:
+                has_sauce = True
+
+        return has_vegetable and has_sauce and self.is_well_composed()
